@@ -63,8 +63,8 @@ class QuizInterface:
         """To display title"""
 
         # Title
-        title = Label(self.window, text="iQuiz Application",
-                      width=50, bg="green", fg="white", font=("ariel", 20, "bold"))
+        title = Label(self.window, text="The banter panther",
+                      width=60, bg="green", fg="white", font=('sans-serif',  20, "bold"))
 
         # place of the title
         title.place(x=0, y=2)
@@ -147,7 +147,7 @@ class QuizInterface:
         # The first button is the Next button to move to the
         # next Question
         next_button = Button(self.window, text="Next", command=self.next_btn,
-                             width=10, bg="green", fg="white", font=("ariel", 16, "bold"))
+                             width=10, bg="white", fg="green", font=("ariel", 16, "bold"))
 
         # palcing the button  on the screen
         next_button.place(x=350, y=460)
