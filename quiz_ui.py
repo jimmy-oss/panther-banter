@@ -1,7 +1,21 @@
+from asyncore import loop
+from logging import root
 from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, messagebox
 from quiz_brain import QuizBrain
+import pygame
+from pygame import mixer
 
+   
+ 
 THEME_COLOR = "#375362"
+
+# making function
+pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=4096)
+pygame.mixer.music.load('sounds/audio.mp3')
+pygame.mixer.music.play()
+
+ 
+    
 
 
 class QuizInterface:
@@ -40,6 +54,7 @@ class QuizInterface:
 
         # Next and Quit Button
         self.buttons()
+       
 
         # Mainloop
         self.window.mainloop()
@@ -112,7 +127,7 @@ class QuizInterface:
             self.feedback["text"] = 'Correct answer! \U0001F44D'
         else:
             self.feedback['fg'] = 'red'
-            self.feedback['text'] = ('\u274E Oops! \n'
+            self.feedback['text'] = ('Oops!👎 \n'
                                      f'The right answer is: {self.quiz.current_question.correct_answer}')
 
         if self.quiz.has_more_questions():
@@ -139,11 +154,12 @@ class QuizInterface:
 
         # This is the second button which is used to Quit the self.window
         quit_button = Button(self.window, text="Quit", command=self.window.destroy,
-                             width=5, bg="red", fg="white", font=("ariel", 16, " bold"))
+                             width=5, background="red", fg="green", font=("ariel", 16, " bold"))
 
         # placing the Quit button on the screen
         quit_button.place(x=700, y=50)
-
+        
+    
     def display_result(self):
         """To display the result using messagebox"""
         correct, wrong, score_percent = self.quiz.get_score()

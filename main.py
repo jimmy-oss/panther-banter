@@ -4,6 +4,7 @@ from quiz_brain import QuizBrain
 from quiz_ui import QuizInterface
 from random import shuffle
 import html
+ 
 
 question_bank = []
 for question in question_data:
@@ -22,6 +23,7 @@ for question in question_data:
 quiz = QuizBrain(question_bank)
 
 quiz_ui = QuizInterface(quiz)
+ 
 
 
 print("You've completed the quiz")
