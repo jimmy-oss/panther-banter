@@ -96,3 +96,26 @@ class QuizInterface:
             self.opts[val]['value'] = option
             val += 1
 
+    def next_btn(self):
+        """To show feedback for each answer and keep checking for more questions"""
+
+        # Check if the answer is correct
+        if self.quiz.check_answer(self.user_answer.get()):
+            self.feedback["fg"] = "#184D47"
+            self.feedback["text"] = 'Correct answer! \U0001F44D'
+        else:
+            self.feedback['fg'] = '#AA2B1D'
+            self.feedback['text'] = ('\u274E Oops! \n'
+                                     f'The right answer is: {self.quiz.current_question.correct_answer}')
+
+        if self.quiz.has_more_questions():
+            # Moves to next to display next question and its options
+            self.display_question()
+            self.display_options()
+        else:
+            # if no more questions, then it displays the score
+            self.display_result()
+
+            # destroys the self.window
+            self.window.destroy()
+
