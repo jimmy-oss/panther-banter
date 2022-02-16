@@ -53,3 +53,31 @@ class QuizInterface:
         q_text = self.quiz.next_question()
         self.canvas.itemconfig(self.question_text, text=q_text)
 
+    def radio_buttons(self):
+        """To create four options (radio buttons)"""
+
+        # initialize the list with an empty list of options
+        choice_list = []
+
+        # position of the first option
+        y_pos = 220
+
+        # adding the options to the list
+        while len(choice_list) < 4:
+
+            # setting the radio button properties
+            radio_btn = Radiobutton(self.window, text="", variable=self.user_answer,
+                                    value='', font=("ariel", 14))
+
+            # adding the button to the list
+            choice_list.append(radio_btn)
+
+            # placing the button
+            radio_btn.place(x=200, y=y_pos)
+
+            # incrementing the y-axis position by 40
+            y_pos += 40
+
+        # return the radio buttons
+        return choice_list
+
