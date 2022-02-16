@@ -11,3 +11,15 @@ class QuizInterface:
     
         # Display Title
         self.display_title()
+
+        # Create a canvas for question text, and dsiplay question
+        self.canvas = Canvas(width=1300, height=1300,bg="#FAD586")
+        self.question_text = self.canvas.create_text(400, 125,
+                                                     text="Question here",
+                                                     width=680,
+                                                     fill=THEME_COLOR,
+                                                     font=(
+                                                         'acme', 15, 'italic')
+                                                     )
+        self.canvas.grid(row=2, column=0, columnspan=2, pady=50)
+        self.display_question()
