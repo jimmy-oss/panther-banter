@@ -30,3 +30,9 @@ class QuizInterface:
         # Display four options (radio buttons)
         self.opts = self.radio_buttons()
         self.display_options()
+
+        # Next and Quit Button
+        self.buttons()
+
+        # Mainloop
+        self.window.mainloop()
