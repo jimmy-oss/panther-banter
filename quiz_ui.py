@@ -46,3 +46,10 @@ class QuizInterface:
 
         # place of the title
         title.place(x=0, y=2)
+
+    def display_question(self):
+        """To display the question"""
+
+        q_text = self.quiz.next_question()
+        self.canvas.itemconfig(self.question_text, text=q_text)
+
