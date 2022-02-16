@@ -1,5 +1,3 @@
-from asyncore import loop
-from logging import root
 from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, messagebox
 from quiz_brain import QuizBrain
 import pygame
