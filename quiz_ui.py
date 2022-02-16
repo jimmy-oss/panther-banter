@@ -36,3 +36,13 @@ class QuizInterface:
 
         # Mainloop
         self.window.mainloop()
+
+    def display_title(self):
+        """To display title"""
+
+        # Title
+        title = Label(self.window, text="Panther-Banter Application",
+                      width=50, bg="#064635", fg="#fff", font=("Acme", 20, "bold"))
+
+        # place of the title
+        title.place(x=0, y=2)
