@@ -81,3 +81,18 @@ class QuizInterface:
         # return the radio buttons
         return choice_list
 
+    def display_options(self):
+        """To display four options"""
+
+        val = 0
+
+        # deselecting the options
+        self.user_answer.set(None)
+
+        # looping over the options to be displayed for the
+        # text of the radio buttons.
+        for option in self.quiz.current_question.choices:
+            self.opts[val]['text'] = option
+            self.opts[val]['value'] = option
+            val += 1
+
