@@ -30,3 +30,7 @@ class QuizInterface:
         # Display four options (radio buttons)
         self.opts = self.radio_buttons()
         self.display_options()
+
+        # To show whether the answer is right or wrong
+        self.feedback = Label(self.window, pady=10, font=("Acme", 15, "bold"))
+        self.feedback.place(x=300, y=380)
