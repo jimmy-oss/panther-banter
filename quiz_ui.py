@@ -7,3 +7,7 @@ class QuizInterface:
         self.window.geometry("850x530")
         # self.window.configure(bg='blue')
         self.window['background']='#FAD586'
+
+    
+        # Display Title
+        self.display_title()
