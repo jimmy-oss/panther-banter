@@ -26,3 +26,7 @@ class QuizInterface:
 
         # Declare a StringVar to store user's answer
         self.user_answer = StringVar()
+
+        # Display four options (radio buttons)
+        self.opts = self.radio_buttons()
+        self.display_options()
