@@ -23,3 +23,6 @@ class QuizInterface:
                                                      )
         self.canvas.grid(row=2, column=0, columnspan=2, pady=50)
         self.display_question()
+
+        # Declare a StringVar to store user's answer
+        self.user_answer = StringVar()
