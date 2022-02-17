@@ -23,7 +23,7 @@ sports quiz challenge with a sweet background music.
 
 > SubiraMbula 🌼
 
-> Sam Arden 👨🏾‍💻;
+> Sam Arden 👨🏾‍💻
 
 # BEHAVIOUR DRIVEN DEVELOPMENT 😇
 
