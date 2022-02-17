@@ -137,4 +137,17 @@ class QuizInterface:
         # placing the Quit button on the screen
         quit_button.place(x=1150, y=50)
 
+    def display_result(self):
+        """To display the result using messagebox"""
+        correct, wrong, score_percent = self.quiz.get_score()
+
+        correct = f"Correct: {correct}"
+        wrong = f"Wrong: {wrong}"
+
+        # calculates the percentage of correct answers
+        result = f"Score: {score_percent}%"
+
+        # Shows a message box to display the result
+        messagebox.showinfo("Result", f"{result}\n{correct}\n{wrong}")
+
 
