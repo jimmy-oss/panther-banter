@@ -1,3 +1,9 @@
+from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, messagebox
+from quiz_brain import QuizBrain
+
+THEME_COLOR = "#184D47"
+
+
 class QuizInterface:
 
     def __init__(self, quiz_brain: QuizBrain) -> None:
