@@ -27,14 +27,15 @@ class QuizInterface:
         # Display Title
         self.display_title()
 
-        # Creating a canvas for question text, and dsiplay question
-        self.canvas = Canvas(width=800, height=250)
+        
+        # Create a canvas for question text, and dsiplay question
+        self.canvas = Canvas(width=1300, height=1300,bg="#FAD586")
         self.question_text = self.canvas.create_text(400, 125,
                                                      text="Question here",
                                                      width=680,
                                                      fill=THEME_COLOR,
                                                      font=(
-                                                         'Ariel', 15, 'italic')
+                                                         'acme', 15, 'italic')
                                                      )
         self.canvas.grid(row=2, column=0, columnspan=2, pady=50)
         self.display_question()
@@ -87,7 +88,7 @@ class QuizInterface:
 
             # setting the radio button properties
             radio_btn = Radiobutton(self.window, text="", variable=self.user_answer,
-                                    value='', font=("ariel", 14))
+                                   bg="#FAD586", value='', font=("ariel", 14))
 
             # adding the button to the list
             choice_list.append(radio_btn)
