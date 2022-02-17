@@ -119,3 +119,22 @@ class QuizInterface:
             # destroys the self.window
             self.window.destroy()
 
+    def buttons(self):
+        """To show next button and quit button"""
+
+        # The first button is the Next button to move to the
+        # next Question
+        next_button = Button(self.window, text="Next", command=self.next_btn,
+                             width=10, bg="#184D47", fg="white", font=("ariel", 16, "bold"))
+
+        # palcing the button on the screen
+        next_button.place(x=350, y=460)
+
+        # This is the second button which is used to Quit the self.window
+        quit_button = Button(self.window, text="Quit", command=self.window.destroy,
+                             width=5, bg="#AA2B1D", fg="white", font=("ariel", 16, " bold"))
+
+        # placing the Quit button on the screen
+        quit_button.place(x=1150, y=50)
+
+
