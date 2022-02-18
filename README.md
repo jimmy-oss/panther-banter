@@ -30,6 +30,14 @@ sports quiz challenge with a sweet background music.
 The Quiz game uses the Api reponse which enables users to choose random choices on the game which they feel are confortably and at the end of the game
 the users is able to know his/her scores and this makes it fun.
 
+# INSTALLATION PROCESS &#127800;
+To use the application you should have python3 and tkinter/pygame installed in your machine.
+<ul>
+<li>Clone this repo using git clone or download the ZIP file of the code</li>
+<li> Open the terminal,run cd command into to the project directory and run the following command "python3 main.py"</li>
+      <li>launch the game quiz and enjoy🤗</li>
+       </ul>
+
 # M.V.P 🤝
 
 We are a Team based on strengths and weaknesses."Alone we can do so little; together we can do so much."
