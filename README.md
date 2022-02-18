@@ -33,6 +33,7 @@ the users is able to know his/her scores and this makes it fun.
 # INSTALLATION PROCESS &#127800;
 To use the application you should have python3 and tkinter/pygame installed in your machine.
 <ul>
+ <li>Pip install requests in your machine</li>
 <li>Clone this repo using git clone or download the ZIP file of the code</li>
 <li> Open the terminal,run cd command into to the project directory and run the following command "python3 main.py"</li>
       <li>launch the game quiz and enjoy🤗</li>
